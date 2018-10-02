@@ -34,7 +34,7 @@ public class SortingAlgorithmTest {
         quickSort = new QuickSort();
         insertionSort = new InsertionSort();
         mergeSort = new MergeSort();
-        SORTED_ARRAY_TO_MERGESORT = ArrayFactory.intArray(900000, 1000);
+        SORTED_ARRAY_TO_MERGESORT = ArrayFactory.intArray(100000, 1000);
         SORTED_ARRAY_TO_QUICKSORT = SORTED_ARRAY_TO_MERGESORT.clone();
         SORTED_ARRAY_TO_INSERTIONSORT = SORTED_ARRAY_TO_MERGESORT.clone();
     }
