@@ -52,33 +52,33 @@ public class SortingAlgorithmTest {
     }
 
     @Test
-    public void shouldOrderArrayWithQuickSort() {
+    public void shouldOrderArrayUsingQuickSort() {
         quickSort.quickSort(DEFAULT_ARRAY_TO_QUICKSORT, 0, DEFAULT_ARRAY_TO_QUICKSORT.length - 1);
         assertEquals(Arrays.toString(ORDERED_ARRAY), Arrays.toString(DEFAULT_ARRAY_TO_QUICKSORT));
     }
 
     @Test
     public void shouldOrderArrayUsingInsertionSort() {
-        insertionSort.sort(DEFAULT_ARRAY_TO_INSERTIONSORT);
+        insertionSort.insertionSort(DEFAULT_ARRAY_TO_INSERTIONSORT);
         assertEquals(Arrays.toString(ORDERED_ARRAY), Arrays.toString(DEFAULT_ARRAY_TO_INSERTIONSORT));
     }
 
     @Test
     public void shouldGetDurationTimeUsingMergeSort() {
         mergeSort.mergeSort(SORTED_ARRAY_TO_MERGESORT, 0, SORTED_ARRAY_TO_MERGESORT.length - 1);
-        System.out.println("Number of Loops Merge Sort: \t" + mergeSort.getNumberOfLoops());
+        System.out.println("Number of Loops Merge Sort: \t" + mergeSort.getCounterOfLoops());
     }
 
     @Test
     public void shouldGetDurationTimeUsingQuickSort() {
         quickSort.quickSort(SORTED_ARRAY_TO_QUICKSORT, 0, SORTED_ARRAY_TO_QUICKSORT.length - 1);
-        System.out.println("Number of Loops Quick Sort: \t" + quickSort.getNumberOfLoops());
+        System.out.println("Number of Loops Quick Sort: \t" + quickSort.getCounterOfLoops());
     }
 
     @Test
     public void shouldGetDurationTimeUsingInsertionSort() {
-        insertionSort.sort(SORTED_ARRAY_TO_INSERTIONSORT);
-        System.out.println("Number of Loops Insertion Sort: " + insertionSort.getNumberOfLoops());
+        insertionSort.insertionSort(SORTED_ARRAY_TO_INSERTIONSORT);
+        System.out.println("Number of Loops Insertion Sort: " + insertionSort.getCounterOfLoops());
     }
 
     @After

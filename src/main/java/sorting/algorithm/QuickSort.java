@@ -1,10 +1,10 @@
 package sorting.algorithm;
 
 public class QuickSort {
-    private long numberOfLoops = 0;
+    private long counterOfLoops = 0;
 
-    public long getNumberOfLoops() {
-        return numberOfLoops;
+    public long getCounterOfLoops() {
+        return counterOfLoops;
     }
 
     public void quickSort(int[] array, int begin, int end) {
@@ -14,13 +14,13 @@ public class QuickSort {
         int i = begin, j = end;
 
         while (i <= j) {
-            numberOfLoops++;
+            counterOfLoops++;
             while (array[i] < pivot) {
-                numberOfLoops++;
+                counterOfLoops++;
                 i++;
             }
             while (array[j] > pivot) {
-                numberOfLoops++;
+                counterOfLoops++;
                 j--;
             }
 
